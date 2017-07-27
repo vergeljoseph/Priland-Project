@@ -1,0 +1,2190 @@
+/*
+Theme Name: Hotel Hamburg
+Theme URI: https://booking-calendar-plugin.com/hotel-theme
+Author: BookingCalendar
+Author URI: https://booking-calendar-plugin.com/
+Description: Hotel Hamburg is suitable for hotel, resorts and other room reservation service. It is compatible with Advanced Booking Calendar plugin.
+Version: 1.0.2
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hotel-hamburg
+Tags: two-columns, right-sidebar, custom-background, custom-menu, featured-images, full-width-template, translation-ready, theme-options, threaded-comments, blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Hotel Hamburg is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 2px;
+	border: 1px #CCC solid;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 15px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-weight: 500;
+}
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+p {
+    color:#666;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #e5e6ea; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+a.more-button {
+    display: inline-block;
+    border: 2px solid;
+    padding: 10px 55px;
+    font-size: 18px;
+}
+.more-button-wrapper {
+    clear: both;
+    text-align: center;
+    margin-top: 25px;
+    overflow: hidden;
+    float: none;
+}
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+    color: #0186af;
+    text-decoration: inherit;
+}
+
+a:visited {
+    color: #0186af;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #179bd7;
+}
+
+a:focus {
+    outline:inherit;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+#site-navigation{
+    float: right;
+    width: auto;
+}
+
+.main-navigation ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 235px;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    display: block;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.2s ease;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px #888;
+
+}
+
+.main-navigation ul li:hover > ul.sub-menu,
+.main-navigation ul li:hover > ul.children{
+    display: block;
+    opacity: 1;
+    z-index: 1000;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition: transform 0.3s ease, opacity 0.2s ease .1s;
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.2s ease .1s;
+}
+
+.main-navigation ul ul ul {
+    left:100%;
+    top: 0
+}
+
+.main-navigation li {
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.main-navigation li li {
+    float: none;
+    display: block;
+}
+
+.main-navigation ul li li:first-child > a {
+    border-left: none;
+}
+
+.main-navigation ul li a {
+    color: #0186af;
+    display: block;
+    font-size: 18px;
+    padding: 35px 20px;
+    position: relative;
+    z-index: 99;
+}
+.main-navigation ul ul a {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.34);
+    border-left: medium none;
+    border-right: medium none;
+    height: auto;
+    padding: 7px 20px;
+    text-align: left;
+    width: 100%;
+    color: #666;
+}
+
+.main-navigation ul ul li:last-child a {
+    border: none;
+}
+
+.main-navigation ul li.menu-item-has-children > a::after,
+.main-navigation ul li.page_item_has_children > a::after {
+    content: "\f107";
+    font-family: FontAwesome;
+    margin-left: 10px;
+    margin-right: 0;
+    position: absolute;
+    right: 10px;
+    top: 36px;
+}
+
+.main-navigation ul li li.menu-item-has-children > a::after,
+.main-navigation ul li li.page_item_has_children > a::after {
+    content: "\f105";
+    top: 10px;
+}
+
+.main-navigation ul li.menu-item-has-children a,
+.main-navigation ul li.page_item_has_children a {
+    padding-right: 30px;
+}
+
+.main-navigation li a:hover,
+.main-navigation li.current-menu-item > a,
+.main-navigation li.current_page_item > a,
+.main-navigation li:hover > a {
+    color: #222;
+}
+
+.main-navigation ul ul li a:hover,
+.main-navigation ul ul li.current-menu-item a,
+.main-navigation ul ul li.current_page_item a,
+.main-navigation ul ul li:hover > a {
+    color: #179bd7;
+    background-color:inherit;
+}
+
+.main-navigation .menu-toggle,
+.main-navigation .dropdown-toggle {
+    display: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+#mobile-menu-control,
+#mobile-menu {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+.hentry {
+    padding: 20px;
+    background: #fff;
+}
+.page-header {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 25px;
+}
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.comment-notes {
+    position: relative;
+}
+
+#respond {
+    clear: both;
+    display: block;
+    background: #fff;
+    padding: 30px;
+}
+
+#comments {
+    margin-top: 30px;
+}
+
+#commentform label {
+    display: inline-block;
+    width: 100px;
+    position: relative;
+}
+
+#comment-form-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.comment-list li.comment::after {
+    content: inherit;
+    display: none;
+}
+
+.comment-list li{
+    padding-left: 0;
+}
+
+.comment {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+ol.comment-list {
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: inherit;
+    padding: 0;
+    width: 100%;
+}
+
+ol.comment-list .children {
+    border: medium none;
+    float: left;
+    margin: 15px 0 15px 15px;
+    width: 98%;
+}
+
+ol.comment-list li {
+    list-style: outside none none;
+    margin-bottom: 15px;
+}
+
+.authorbox {
+    overflow: hidden;
+    background: #fff;
+    padding: 30px;
+}
+
+.comment .comment-body {
+    background-color: #ffffff;
+    border-radius: 0;
+    clear: both;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    padding: 35px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.comments-title {
+    font-weight: normal;
+    margin: 25px 0 0;
+}
+
+.comment-author.vcard {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.comment-list .children {
+    background-position: left 20px;
+    background-repeat: no-repeat;
+    border-left: 1px solid rgb(238, 238, 238);
+    margin-left: 0;
+    padding-left: 40px;
+}
+
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input{
+    width: 100%;
+}
+
+#commentform span.required {
+    font-size: 19px;
+    position: absolute;
+    bottom: 2px;
+    color: red;
+}
+
+.comment-list li.comment > div img.avatar {
+    left: 29px;
+    position: absolute;
+    top: 29px;
+}
+
+.vcard .avatar {
+    float: left;
+    margin: 7px 15px 15px 0;
+}
+
+.comment-metadata {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+
+}
+
+.comment-metadata > a{
+     color: #49616b;
+     margin-right: 30px;
+}
+
+.comment-metadata::before{
+    display: inline-block;
+    font-family: FontAwesome;
+    height: 15px;
+    content: "\f017";
+}
+
+.form-allowed-tags code {
+    white-space: inherit;
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.author-avatar {
+    float: left;
+    margin-right: 15px;
+}
+
+.authorbox  .author-info,
+.authorbox  .author-bio-posts-content {
+    float: left;
+    max-width: 90%;
+    width: 90%;
+}
+
+.author-info h4 {
+    margin-bottom: 0;
+}
+
+
+/*==========================================================
+********************** Posts and pages ********************
+===========================================================*/
+
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+.entry-meta {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.entry-meta > span,
+.entry-footer > span,
+.single-post-meta > span {
+    margin: 0 10px 0 0;
+    font-size: 14px;
+}
+
+.entry-meta > span a ,
+.single-post-meta > span a,
+.entry-footer > span a{
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 15px 0 0;
+}
+footer.entry-footer {
+    margin-top: 15px;
+    overflow: hidden;
+}
+.entry-meta > span::before,
+.entry-footer > span::before,
+.single-post-meta > span::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    height: 15px;
+    margin-right: 8px;
+    content: "";
+    color: #666;
+}
+
+.entry-meta .byline .author.vcard {
+    margin-left: -4px;
+}
+
+.entry-footer span {
+    margin-right: 15px;
+    float: left;
+    display: block;
+}
+span.comments-link::before {
+    content: "\f086";
+}
+
+.entry-meta .posted-on::before,
+.single-post-meta .posted-on::before {
+    content: "\f017 ";
+}
+
+.entry-footer > .cat-links::before {
+    content: "\f07c";
+}
+
+.entry-meta .byline::before,
+.single-post-meta .byline::before {
+    content: "\f007";
+}
+
+.entry-footer .edit-link::before{
+    content: "\f044";
+}
+
+.entry-footer .tags-links::before{
+    content: "\f02c";
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.inner-wrapper {
+	margin: 0 -30px;
+}
+
+/*--------------------------------------------------------------
+## Slider
+--------------------------------------------------------------*/
+
+#featured-slider {
+    position: relative;
+    z-index: 99;
+}
+
+#main-slider {
+    color: #686868;
+    clear: both;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+}
+
+#featured-slider  article::after {
+    background: rgb(0, 0, 0) none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 888;
+}
+
+
+#main-slider img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+#main-slider .cycle-slide {
+    width: 100%;
+}
+
+#main-slider article.first {
+    display: block;
+}
+
+#main-slider article {
+    display: none;
+}
+
+#main-slider .cycle-slideshow {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#main-slider .cycle-caption {
+    bottom: 30%;
+    height: auto;
+    left: 10%;
+    max-width: 80%;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    transition: all 1s ease-in-out 0s;
+    width: 100%;
+    z-index: 999;
+}
+
+
+#main-slider h3 {
+    display: inline-block;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px 0;
+}
+
+
+#main-slider p {
+    font-size: 20px;
+    margin-bottom:30px;
+    color: #fff;
+}
+
+#main-slider a,
+#main-slider h3 {
+    color: #fff;
+}
+
+
+#main-slider .slider-buttons a {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 15px;
+}
+
+#main-slider .slider-buttons a {
+    padding: 10px 37px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+
+/*slider pager box*/
+
+#main-slider .cycle-pager span{
+    background-color: transparent;
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: 13px;
+    margin: 3px 4px;
+    width: 13px;
+    z-index: 99;
+    border: 2px solid #fff;
+}
+
+#main-slider .cycle-pager {
+    bottom:0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+#main-slider .cycle-pager .cycle-pager-active {
+    background-color: #18428c;
+    border-color:#fff;
+}
+
+/*Slider cycle next / previous*/
+
+#main-slider .cycle-prev, #main-slider .cycle-next {
+    bottom: 40%;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 44px;
+    font-weight: normal;
+    position: absolute;
+    text-align: center;
+    width: 47px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.74);
+    color: #222;
+    height: 60px;
+    padding: 6px;
+    line-height: 1;
+}
+
+#main-slider .cycle-prev {
+   left:0;
+}
+
+#main-slider  .cycle-next {
+    right:0;
+}
+
+#main-slider .cycle-prev:hover,
+#main-slider .cycle-next:hover {
+    background-color: #0186af;
+    color: #fff;
+}
+
+
+#booking-form-area {
+    display: block;
+    width: 250px;
+    position: absolute;
+    bottom: -49px;
+    z-index: 999;
+    background: #ddd;
+    right: 10%;
+    padding: 5px;
+}
+#booking-form-area #abc-form-content {
+	width: auto !important;
+}
+#booking-form-area #abc-widget-wrapper {
+	padding: 0 !important;
+	padding-bottom: 10px !important;
+}
+/*--------------------------------------------------------------
+# Header Style
+--------------------------------------------------------------*/
+#masthead {
+    background: #fff;
+    clear: both;
+    width: 100%;
+    z-index: 99999;
+    position: relative;
+    transition: all 0.2s ease-in-out 0s;
+    padding: 15px 0;
+}
+
+#main-header {
+    border-bottom: 1px solid #ddd;
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.custom-logo-link {
+    display: block;
+}
+
+.site-branding {
+	float: left;
+    margin-left: 15px;
+}
+
+.site-title {
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+
+.site-title a {
+    color: #1d6ea5;
+}
+.site-title a:hover{
+    color: #272727;
+}
+
+.site-description {
+    color: #1d6ea5;
+    font-size: 17px;
+    font-style: inherit;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.entry-content blockquote {
+	border-left: 5px #1d6ea5 solid;
+	margin: 0;
+	padding-left: 15px;
+}
+
+.entry-content blockquote p {
+	margin-top: 15px;
+}
+
+/*Page/Post Navigation*/
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 15px;
+    clear: both;
+    background: #fff;
+    overflow: hidden;
+    padding: 30px;
+    margin-top: 30px;
+}
+.nav-links span.meta-nav {
+    display: none;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+.comment-navigation .nav-previous a::before,
+.posts-navigation .nav-previous a::before,
+.post-navigation .nav-previous a::before{
+    content: "\f177";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-right: 10px;
+}
+
+.comment-navigation .nav-next a::after,
+.posts-navigation .nav-next a::after,
+.post-navigation .nav-next a::after{
+    content: "\f178";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-left: 10px;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+.pagination .nav-links .page-numbers {
+    padding: 5px;
+    background: #fff;
+}
+
+.pagination .nav-links .page-numbers.dots {
+    background-color: inherit;
+    border:none;
+    color:#1a1a1a;
+}
+
+.pagination .nav-links .page-numbers {
+    padding: 0 10px;
+    background: #1a1a1a;
+    display: inline-block;
+    color: #fff;
+}
+
+.pagination .nav-links .current,
+.pagination .nav-links a:hover,
+.pagination .nav-links a:active,
+.pagination .nav-links a:focus {
+    background:#018aaa;
+    color: #fff;
+}
+
+.pagination .nav-links {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Front Page sections
+--------------------------------------------------------------*/
+#home-widget-area {
+    background: #e5e6ea;
+}
+#home-widget-area::after,
+#home-widget-area .widget::after,
+#home-widget-area .widget::before,
+#home-widget-area::before,
+.inner-wrapper::after,
+.inner-wrapper:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#home-widget-area .widget {
+    margin-bottom: 0;
+    padding: 45px 0;
+}
+
+#home-widget-area .widget-title {
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 48px;
+}
+
+
+#home-widget-area .widget-subtitle {
+    text-align: center;
+    font-size: 24px;
+    margin: 0 auto 30px;
+    max-width: 700px;
+}
+/*--------------------------------------------------------------
+## Rooms
+--------------------------------------------------------------*/
+
+.hotel_hamburg_widget_rooms .rooms-wrapper {
+    background: #ffffff none repeat scroll 0 0;
+    clear: both;
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #f1f1f1;
+}
+
+.hotel_hamburg_widget_rooms .rooms-item {
+    float: left;
+    padding: 15px 30px;
+    margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hotel_hamburg_widget_rooms .rooms-text-wrap {
+    padding: 20px 0 0;
+}
+
+.hotel_hamburg_widget_rooms .rooms-item img {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.hotel_hamburg_widget_rooms .rooms-thumb {
+    margin-bottom: 15px;
+}
+
+.hotel_hamburg_widget_rooms .rooms-title {
+    line-height: 1.2;
+    font-size: 24px;
+}
+.hotel_hamburg_widget_rooms .rooms-thumb {
+	position: relative;
+}
+.hotel_hamburg_widget_rooms .room-price {
+    position: absolute;
+    bottom: 0;
+    background: #f5ca59;
+    color: #fff;
+    font-size: 24px;
+    right: 0;
+    padding: 0 25px;
+}
+.hotel_hamburg_widget_rooms .rooms-col-3 .rooms-item {
+    width: 33.33%;
+}
+
+.hotel_hamburg_widget_rooms .rooms-col-4 .rooms-item {
+    width: 25%;
+}
+
+.hotel_hamburg_widget_rooms .rooms-col-2 .rooms-item {
+    width: 50%;
+}
+
+.hotel_hamburg_widget_rooms .rooms-col-1 .rooms-item {
+    width: 100%;
+}
+
+
+.hotel_hamburg_widget_location {
+	background-color: #fff;
+}
+
+.hotel_hamburg_widget_location .location-map,
+.hotel_hamburg_widget_location .location-content {
+    width: 50%;
+    float: left;
+    padding: 0 30px;
+}
+
+.hotel_hamburg_widget_location .location-content {
+    text-align: center;
+}
+/*--------------------------------------------------------------
+## Testimonials
+--------------------------------------------------------------*/
+.hotel_hamburg_widget_testimonials .testimonials-item {
+    float: left;
+    padding: 15px 30px;
+    margin-bottom: 0;
+    width: 33.33%;
+
+}
+.hotel_hamburg_widget_testimonials .testimonials-item {
+}
+
+.testimonials-wrapper {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-top: 4px solid #018aaa;
+}
+
+.hotel_hamburg_widget_testimonials .testimonials-title {
+    text-align: right;
+}
+.hotel_hamburg_widget_testimonials .testimonials-summary p {
+    font-size: 18px;
+    color: #869197;
+    letter-spacing: 2px;
+}
+.hotel_hamburg_widget_testimonials .testimonials-summary p:before {
+    content: "\f10d";
+    display: inline-block;
+    height: 18px;
+    width: 3px;
+    margin-right: 20px;
+    margin-bottom: -2px;
+    font-family: "FontAwesome";
+}
+.hotel_hamburg_widget_testimonials  .testimonials-summary p:after {
+    content: "\f10e";
+    display: inline-block;
+    height: 18px;
+    width: 3px;
+    margin-right: 10px;
+    margin-bottom: -2px;
+    font-family: "FontAwesome";
+}
+/*--------------------------------------------------------------
+## Content
+--------------------------------------------------------------*/
+
+#content {
+    padding: 40px 0;
+}
+
+.page-template-tpl-home #content {
+    display: none;
+}
+
+#primary {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 70%;
+}
+
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+
+#sidebar-primary {
+    float: right;
+}
+
+#sidebar-secondary {
+    float: left;
+}
+
+.sidebar {
+    width: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.sidebar .widget {
+    background: #fff;
+    padding: 20px;
+}
+
+.widget-area .widget::after,
+.widget-area .widget::before {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.sidebar .widget-title {
+    position: relative;
+    color: #272727;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 5px 0;
+    line-height: 1.5;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul {
+    list-style: outside none none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul ul {
+    border-bottom:none;
+    padding-bottom: 0;
+}
+
+.sidebar ul li {
+    padding-bottom: 3px;
+    padding-top: 3px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.sidebar ul li::before {
+    color: #4f7acd;
+    content: "\f178";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 12px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+}
+
+.sidebar ul li a,
+.sidebar  ul li a:visited {
+    color: #272727;
+}
+
+.sidebar  ul li a:hover,
+.sidebar  ul li a:focus,
+.sidebar  ul li a:active {
+    color:#1d6ea5;
+}
+
+/*calendar section*/
+
+.section_calendar {
+    text-align: center;
+}
+
+.section_calendar caption {
+    border:1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.section .tagcloud a {
+    border: 1px solid;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+}
+
+.section_categories li > a,
+.section_archive li > a {
+    display: inline-block;
+    min-width: 85%;
+}
+
+/*  layout sidebar*/
+
+
+.global-layout-left-sidebar #primary {
+    float: right;
+}
+
+.three-columns-enabled #primary {
+    display: inline-block;
+    float: none;
+    width: 50%;
+}
+
+.global-layout-three-columns .sidebar {
+    float: right;
+}
+
+.three-columns-enabled .sidebar {
+     width: 25%;
+}
+
+.global-layout-no-sidebar #primary {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Footer Widgets
+--------------------------------------------------------------*/
+#footer-widgets .inner-wrapper {
+	margin:0;
+}
+#footer-widgets {
+    background: #018aaa;
+    overflow: hidden;
+    padding: 35px 0 15px;
+    color: #fff;
+}
+#footer-widgets .widget-title {
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+#footer-widgets ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footer-widgets ul li {
+    font-size: 17px;
+    padding: 0px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+
+#footer-widgets .footer-widget-area {
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+}
+
+#footer-widgets a,
+#footer-widgets a:visited {
+    color:#ddd;
+}
+
+#footer-widgets a:hover,
+#footer-widgets a:active,
+#footer-widgets a:focus {
+    color:#fff;
+}
+
+#footer-widgets .widget-column {
+    float: left;
+}
+
+#footer-widgets .footer-active-1 {
+    width: 100%;
+}
+
+#footer-widgets .footer-active-2 {
+    width: 50%;
+}
+
+#footer-widgets .footer-active-3 {
+    width: 33.33%;
+}
+
+#footer-widgets .footer-active-4 {
+    width: 25%;
+}
+
+#footer-widgets .section-title {
+    color: #dddddd;
+    font-weight: 400;
+    border-bottom: 1px dashed #a9a8a8;
+    padding-bottom: 5px;
+}
+
+/*Footer Navigation*/
+
+#footer-navigation li {
+    display: inline-block;
+    list-style: outside none none;
+}
+
+#footer-navigation li a {
+    display: block;
+    padding: 5px 10px;
+}
+
+#footer-navigation ul {
+    margin: 0;
+}
+
+/*--------------------------------------------------------------
+# colophon
+--------------------------------------------------------------*/
+#colophon {
+    background-color: #018aaa;
+    clear: both;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 0;
+    text-align: center;
+}
+#colophon p {
+    margin: 0;
+}
+#colophon a,
+#colophon a:visited {
+    color:#ccc;
+}
+
+#colophon a:hover,
+#colophon a:focus,
+#colophon a:active {
+    color:#fff;
+}
+.site-info {
+    float: right;
+}
+.credits {
+    float: left;
+}
+#colophon .container {
+    border-top: 2px dotted #DDD;
+    padding-top: 15px;
+}
+
+/*--------------------------------------------------------------
+##  Media Queries
+--------------------------------------------------------------*/
+
+/* Smaller than standard 1139 (devices and browsers) */
+@media only screen and (max-width:1300px) {
+.container {
+	max-width: 97%;
+}
+
+}
+
+@media only screen and (max-width:900px) {
+	body{
+		padding-top: 0;
+	}
+	#page {
+		padding-top: 45px;
+	}
+
+	#site-navigation {
+		display: none;
+	}
+	.sidr-open #mobile-menu-control {
+		transition: inherit;
+	}
+	#mobile-menu-control {
+		background: #222 none repeat scroll 0 0;
+		display: block;
+		left: 0;
+		padding: 5px;
+		position: fixed;
+		text-align: center;
+		top: 0;
+		width: 100%;
+		z-index: 999999;
+	}
+	.logged-in #mobile-menu-control {
+		top: 45px;
+	}
+	.sidr-open #mobile-menu-control {
+		padding-left: 275px;
+		text-align: left;
+		transition: inherit;
+	}
+	#mobile-menu-control i {
+		background-color: #179bd7;
+		box-shadow: 4px 3px 0 #000000;
+		color: #ffffff;
+		font-size: 24px;
+		padding: 6px 8px;
+	}
+	.sidr ul li ul li a, .sidr ul li ul li span {
+		line-height: 1.5;
+		padding-bottom: 10px;
+		padding-left: 30px;
+		padding-top: 10px !important;
+	}
+	.site-branding {
+	    float: left;
+	    margin-left: 0;
+	    float: none;
+	    display: block;
+	    text-align: center;
+	}
+
+	#primary,
+	.sidebar {
+	    width: 100%;
+	    padding: 0;
+	}
+	.inner-wrapper {
+		margin:0 -15px;
+	}
+	.hotel_hamburg_widget_rooms .rooms-item,
+	.hotel_hamburg_widget_location .location-map,
+	.hotel_hamburg_widget_location .location-content,
+	.hotel_hamburg_widget_testimonials .testimonials-item {
+		padding-left: 15px;
+		padding-right:15px;
+	}
+	.hotel_hamburg_widget_location .location-map,
+	.hotel_hamburg_widget_location .location-content,
+	.hotel_hamburg_widget_location .location-map iframe {
+		width: 100%;
+	}
+
+	 {
+	    width: 100%;
+	}
+}
+
+/* Smaller than standard 1023 (devices and browsers) */
+
+@media only screen and (max-width:767px) {
+
+	#footer-widgets.widget-area .widget-column {
+		width: 50%;
+	}
+	#footer-widgets.widget-area .widget-column:nth-child(odd) {
+		clear:both;
+	}
+	#home-widget-area .hotel_hamburg_widget_rooms .rooms-item {
+		width: 50%;
+	}
+	#home-widget-area .hotel_hamburg_widget_testimonials .testimonials-item  {
+		width: 100%;
+	}
+	#booking-form-area {
+		bottom: inherit;
+		display: block;
+		float: none;
+		margin: 30px auto;
+		position: inherit;
+		right: inherit;
+	}
+	#main-slider .cycle-prev,
+	#main-slider .cycle-next {
+		font-size: 23px;
+		height: 35px;
+		padding: 5px;
+		width: 35px;
+	}
+
+}
+
+@media only screen and (max-width:479px) {
+
+	#footer-widgets.widget-area .widget-column {
+		width: 100%;
+		border-bottom:1px solid #ddd;
+	}
+
+	#home-widget-area .hotel_hamburg_widget_rooms .rooms-item{
+		width: 100%;
+	}
+
+	.site-footer .credits,
+	.site-footer .site-info {
+		float: none;
+	}
+}
+
